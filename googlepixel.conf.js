@@ -12,8 +12,8 @@ exports.config = {
       project: "First Webdriverio Android Project",
       build: 'Webdriverio Android',
       name: 'first_test',
-      device: "Samsung Galaxy S21 Plus",
-      os_version: "11.0",
+      device: "Google Pixel 7 Pro",
+      os_version: "13.0",
       app: process.env.BROWSERSTACK_APP_ID || 'bs://e3ded129e54306dcbad498f327db00c43639cd8a',
       'browserstack.debug': true
     }],
