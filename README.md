@@ -1,27 +1,30 @@
-# Repo with test task for browserstack
 
-## Task
-1.  Clone repo and install all dependencies.
-2.  Upload app Android-NativeDemoApp to browserstack using API ([Link](https://www.browserstack.com/docs/app-automate/api-reference/appium/apps#upload-an-app)) and add unique ID to the ```wdio.conf.js```.
-3.  Create test 5 test cases (locators can be found using [Appium Inspector](https://github.com/appium/appium-inspector/releases) that conected to the Browserstack account).
-4.  Create workflow with using secrets (for user and key in capabilities)([description of secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)).
-5.  Create 2 config files (with different devices)
+# Summary of repo # WebdriverIOBrowserstackTask
 
-## Tips
-1.  You can create multiple accounts in browserstack (demo trial - 100 minutes).
-2.  First of all find all necessary locators.
-3.  In the Appium Inspector at the header choose ```Select Cloud Providers -> Browserstack``` and into ```JSON Representation``` insert the next:
-```
-{
-  "appium:protocol": "https",
-  "appium:hostname": "hub.browserstack.com",
-  "appium:path": "/wd/hub",
-  "appium:maxInstances": 1,
-  "appium:app": "Your App ID is here",
-  "appium:os_version": "9.0",
-  "appium:deviceName": "Google Pixel 3",
-  "platformName": "Android",
-  "appium:autoAcceptAlerts": "true",
-  "appium:browserstack.appium_version": "1.22.0"
-}
-```
+Test core repo created to demonstrate the usage of WebdriverIO in action along with JavaScript to test the mobile app in different cellphone models using Browserstack.
+
+# System requirements:
+
+Node.js 16x or higher.  
+Windows 10 and above (64-bit only).  
+macOS 10.9 and above (Intel or Apple Silicon 64-bit (x64 or arm64)).
+Linux Ubuntu 20.04 and above, Fedora 21 and Debian 8 (x86_64 or Arm 64-bit (x64 or arm64))
+ 
+# Steps to install:
+
+1. Open the repo: https://github.com/AndriiSavruk/WebdriverIOBrowserstackTask
+2. Clone the repo
+HTTP: https://github.com/AndriiSavruk/WebdriverIOBrowserstackTask.git   
+Github: ```git clone https://github.com/AndriiSavruk/WebdriverIOBrowserstackTask```
+3. Install NodeJS and NPM
+4. Run a ``` npm install ``` in the project root
+
+# Steps to launch:
+
+for running the tests in the Samsung Galaxy S21 Plus cellphone:  
+```npm run wdio```  
+for running the tests in the Google Pixel 7 Pro:  
+```npm run googlepixel```  
+
+ 
+
